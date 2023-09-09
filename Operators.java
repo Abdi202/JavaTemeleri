@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Operators {
 
@@ -48,6 +49,71 @@ public class Operators {
   System.out.println("Mantiksal ve Sonuc: "+andResult);
   System.out.println("Mantiksal veya Sonuc "+ orResult);
   System.out.println("Mantiksal Degil sinuc "+notResult);
-	}
+  
+  
+  
+  Scanner scanner = new Scanner(System.in);
 
+  // Kullanıcıdan üçgenin taban uzunluğunu ve yüksekliğini alın
+  System.out.print("Üçgenin taban uzunluğunu girin: ");
+  double taban = scanner.nextDouble();
+
+  System.out.print("Üçgenin yüksekliğini girin: ");
+  double yukseklik = scanner.nextDouble();
+
+  // Alanı hesaplayın
+  double alan = (taban * yukseklik) / 2;
+
+  // Sonucu ekrana yazdırın
+  System.out.println("Üçgenin alanı: " + alan);
+
+  // Scanner nesnesini kapatın
+  scanner.close();
+  
+  System.out.print("----------------------------------------");
+//Kullanıcıdan bir sayı girmesini isteyin
+  Scanner scanner2 = new Scanner(System.in);
+  System.out.print("Bir sayı girin: ");
+  int sayi = scanner2.nextInt();
+  
+  // Sayının pozitif, negatif veya sıfır olduğunu kontrol edin
+  if (sayi > 0) {
+      System.out.println("Girdiğiniz sayı pozitif.");
+  } else if (sayi < 0) {
+      System.out.println("Girdiğiniz sayı negatif.");
+  } else {
+      System.out.println("Girdiğiniz sayı sıfır.");
+  }
+
+  // Scanner nesnesini kapatın
+  scanner2.close();
+
+  
+  
+  System.out.print("---------------------------------");
+  
+  // Doğru kullanıcı adı ve şifreyi tanımlayın
+  String dogruKullaniciAdi = "kullanici";
+  String dogruSifre = "sifre";
+
+  // Kullanıcıdan kullanıcı adı ve şifreyi isteyin
+  Scanner scanner1 = new Scanner(System.in);
+  System.out.print("Kullanıcı Adı: ");
+  String kullaniciAdi = scanner.nextLine();
+  System.out.print("Şifre: ");
+  String sifre = scanner1.nextLine();
+
+  // Kullanıcı adı ve şifre doğru mu kontrol edin
+  if (kullaniciAdi.equals(dogruKullaniciAdi) && sifre.equals(dogruSifre)) {
+      System.out.println("Giriş Başarılı");
+  } else {
+      System.out.println("Hatalı Giriş");
+  }
+
+  // Scanner nesnesini kapatın
+  scanner1.close();
 }
+}
+	
+
+
